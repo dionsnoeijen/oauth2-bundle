@@ -79,6 +79,10 @@ final class Configuration implements ConfigurationInterface
                     ->cannotBeEmpty()
                     ->defaultValue('P1M')
                 ->end()
+                ->booleanNode('disable_access_token_saving')
+                    ->info('Whether to disable access token saving to persistence layer')
+                    ->defaultFalse()
+                ->end()
             ->end()
         ;
 
